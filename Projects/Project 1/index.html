@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Sriptures Mapped</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <div id="header">
+        <div id="crumbs"></div>
+        <div id="centerhead">
+            <div class="title">The Scriptures, Mapped</div>
+            <div class="subtitle">By Andrew Kimball</div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="scriptures"></div>
+        <div id="map"></div>
+    </div>
+
+    <!-- Add your site or application content here -->
+    <script src="js/scriptures.js"></script>
+    
+    <script type="text/javascript">
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 31.7683, lng: 35.2137 }, 
+                zoom: 8,
+            });
+        }
+
+        function ready(readyListener) {
+            if (document.readyState !== "loading") {
+                readyListener();
+            } else {
+                document.addEventListener("DOMContentLoaded", readyListener);
+            }
+        }
+
+        function showLocation() {
+            Scriptures.showLocation(...arguments);
+        }
+
+        ready(function () {
+            Scriptures.init(() => { Scriptures.onHashChanged(); }); 
+            window.addEventListener("hashchange", Scriptures.onHashChanged);
+        });
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrx9GFDZd4-1pa_72HZHwyrfcH1oa06a8&callback=initMap"></script>
+
+    
+</body>
+</html>
