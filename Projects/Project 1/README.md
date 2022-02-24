@@ -1,3 +1,4 @@
-**Learning Experience - Project 1**
+# Project 1 - Bible Text & Locations Application
+		
 
-I enjoyed working on this project. I found the videos to be extremely helpful in learning how to apply what we have been studying the past few weeks in class to a real project. I learned a lot from studying the code structure that Dr. Liddle employed thorughout this project. I also felt like I learned a lot on my own while implementing the extra requirements that were not covered in the videos. Overall, this was a great experience. 
+This project is a single page web application that uses the Google Maps API to display the locations that exist in each chapter of the Bible, along with the text of each chapter. To run the application, download the files locally, and use any IDE (preferably VS Code) to run the application.
