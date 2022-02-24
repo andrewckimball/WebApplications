@@ -37,6 +37,7 @@
     <script src="js/scriptures.js"></script>
     
     <script type="text/javascript">
+        const KEY_GOOGLE = '';
         let map;
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -63,7 +64,7 @@
         });
     </script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrx9GFDZd4-1pa_72HZHwyrfcH1oa06a8&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=KEY_GOOGLE&callback=initMap"></script>
 
     
 </body>
